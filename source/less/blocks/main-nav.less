@@ -3,16 +3,29 @@
   color: #000000;
   font-weight: 700;
   line-height: 24px;
-  position: relative;
 }
 
 .main-nav__toggle {
+  position: absolute;
+  top: 32px;
+  right: 0;
   width: 20px;
-  height: 20px;
+  height: 14px;
   background-color: transparent;
   border-left: none;
   border-right: none;
   border-color: #000000;
+  cursor: pointer;
+}
+
+.main-nav__list {
+  position: absolute;
+  min-width: 320px;
+  display: none;
+
+  &--open {
+    display: block;
+  }
 }
 
 .main-nav__item {
