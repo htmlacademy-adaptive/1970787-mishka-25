@@ -1,12 +1,9 @@
 .page-catalog {
   font-size: 19px;
-  color: #ffffff;
+  color: @white;
   font-weight: 700;
   line-height: 24px;
-  background-color: #63d1bb;
-}
-
-.page-catalog__list {
+  background-color: @mint;
 }
 
 .page-catalog__item {
@@ -17,21 +14,31 @@
   a {
     display: block;
     box-sizing: border-box;
+    width: 320px;
     min-height: 103px;
+    margin: 0 auto;
     padding: 24px 160px 31px 30px;
   }
 
   &:nth-child(even) {
-    background-color: #56c3b2;
+    background-color: @darkmint;
   }
 
   &--interior {
-    background-image: url("/source/img/interior.svg");
-    background-position: right 36px center;
+    background-image: url("../../img/interior.svg");
+    background-position: right calc(((100vw - 320px) / 2) + 36px) center;
+
+    @media (max-width: 320px) {
+      background-position: right 36px center;
+    }
   }
 
   &--toy {
-    background-image: url("/source/img/toy.svg");
-    background-position: right 27px center;
+    background-image: url("../../img/toy.svg");
+    background-position: right calc(((100vw - 320px) / 2) + 27px) center;
+
+    @media (max-width: 320px) {
+      background-position: right 27px center;
+    }
   }
 }

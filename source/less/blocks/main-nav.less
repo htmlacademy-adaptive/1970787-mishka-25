@@ -1,6 +1,6 @@
 .main-nav {
   font-size: 17px;
-  color: #000000;
+  color: @black;
   font-weight: 700;
   line-height: 24px;
 }
@@ -14,14 +14,19 @@
   background-color: transparent;
   border-left: none;
   border-right: none;
-  border-color: #000000;
+  border-color: @black;
   cursor: pointer;
 }
 
 .main-nav__list {
   position: absolute;
-  min-width: 320px;
+  left: -30px;
+  width: 100vw;
   display: none;
+
+  &--secondary {
+    display: none;
+  }
 
   &--open {
     display: block;
@@ -30,7 +35,7 @@
 
 .main-nav__item {
   box-sizing: border-box;
-  background-color: #ffffff;
+  background-color: @white;
 
   a {
     display: block;
