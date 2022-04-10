@@ -1,0 +1,54 @@
+.main-nav {
+  font-size: 17px;
+  color: @black;
+  font-weight: 700;
+  line-height: 24px;
+}
+
+.main-nav__toggle {
+  position: absolute;
+  top: 32px;
+  right: 0;
+  width: 20px;
+  height: 14px;
+  background-color: transparent;
+  border-left: none;
+  border-right: none;
+  border-color: @black;
+  cursor: pointer;
+}
+
+.main-nav__list {
+  position: absolute;
+  left: -30px;
+  width: 100vw;
+  display: none;
+
+  &--secondary {
+    display: none;
+  }
+
+  &--open {
+    display: block;
+  }
+}
+
+.main-nav__item {
+  box-sizing: border-box;
+  background-color: @white;
+
+  a {
+    display: block;
+    min-height: 59px;
+    text-align: center;
+    padding-top: 29px;
+
+    &:hover {
+      opacity: 0.6;
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
+  }
+}
