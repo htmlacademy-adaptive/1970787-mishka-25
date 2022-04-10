@@ -1,0 +1,27 @@
+.copyright {
+  width: 260px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.copyright__text {
+  font-weight: 700;
+  font-size: 19px;
+  line-height: 18px;
+  color: @black;
+  margin-right: 27px;
+}
+
+.copyright__link {
+  height: 34px;
+  color: @mint;
+
+  &:hover {
+    color: @mint-hover;
+  }
+
+  &:active {
+    color: fade(@mint-hover, 30%);
+  }
+}
