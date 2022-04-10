@@ -19,10 +19,25 @@
     min-height: 103px;
     margin: 0 auto;
     padding: 24px 160px 31px 30px;
+
+    &:hover {
+      padding: 19px 160px 41px 30px;
+    }
   }
+
 
   &:nth-child(even) {
     background-color: @darkmint;
+
+    &:hover {
+      background-color: @mint-hover;
+    }
+  }
+
+  &:nth-child(odd) {
+    &:hover {
+      background-color: #59d5bc;
+    }
   }
 
   &--interior {
