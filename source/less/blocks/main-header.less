@@ -1,12 +1,19 @@
 .main-header {
   background-color: @white;
-  display: grid;
   position: relative;
-  padding: 22px 0;
-}
 
+  &--JS-menu {
+    height: 79px;
 
-.main-header__logo {
-  display: inline-block;
-  margin: 0 auto;
+    @media (min-width: @tablet-width) {
+      height: auto;
+    }
+  }
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    justify-content: center;
+    background-color: transparent;
+    border-bottom: 1px solid fade(@black, 10%);
+  }
 }
