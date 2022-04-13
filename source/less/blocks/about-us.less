@@ -16,10 +16,12 @@
 
   @media (min-width: @tablet-width) {
     width: 668px;
+    margin-bottom: 83px;
   }
 
   @media (min-width: @desktop-width) {
     width: 700px;
+    margin-bottom: 90px;
   }
 }
 
@@ -39,6 +41,7 @@
   @media (min-width: @tablet-width) {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    gap: 110px 0;
   }
 }
 
@@ -47,6 +50,10 @@
 
   &:not(:last-child) {
     margin-bottom: 83px;
+
+    @media (min-width: @tablet-width) {
+      margin: 0;
+    }
   }
 
   .orders(ecology, 1);
