@@ -16,11 +16,11 @@
 
     &::after {
       content: "";
-      width: 100%;
+      width: @tablet-width;
       height: 24px;
       position: absolute;
       bottom: -12px;
-      left: 0;
+      left: calc((100vw - 768px) / 2);
       background-image: url("../../img/page-catalog-wave-tablet.svg");
     }
   }
@@ -30,11 +30,11 @@
 
     &::after {
       content: "";
-      width: 100%;
+      width: @desktop-width;
       height: 34px;
       position: absolute;
       bottom: -17px;
-      left: 0;
+      left: calc((100vw - 1150px) / 2);
       background-image: url("../../img/page-catalog-wave-desktop.svg");
     }
   }

@@ -1,20 +1,60 @@
+.icons(@icon) {
+  &--@{icon}::before {
+    background-image: url("../img/about-us-@{icon}.svg");
+  }
+}
+
+.orders(@type, @order) {
+  &--@{type} {
+    order: @order;
+  }
+}
+
 .about-us {
   width: 260px;
-  margin: 0 auto;
+  margin: 0 auto 58px;
+
+  @media (min-width: @tablet-width) {
+    width: 668px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 700px;
+  }
 }
 
 .about-us__title {
   margin-bottom: 82px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 98px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 95px;
+  }
+}
+
+.about-us__list {
+  @media (min-width: @tablet-width) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 .about-us__item {
+  position: relative;
+
   &:not(:last-child) {
     margin-bottom: 83px;
   }
 
-  &:last-child {
-    margin-bottom: 58px;
-  }
+  .orders(ecology, 1);
+  .orders(like, 5);
+  .orders(handmade, 2);
+  .orders(support, 4);
+  .orders(gift, 6);
+  .orders(price, 3);
 }
 
 .about-us__text {
@@ -23,4 +63,26 @@
   line-height: 20px;
   color: @black;
   margin: 0;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 55px;
+    height: 38px;
+    top: -54px;
+    left: 0;
+    background-repeat: no-repeat;
+  }
+
+  .icons(ecology);
+  .icons(price);
+  .icons(like);
+  .icons(handmade);
+  .icons(support);
+  .icons(gift);
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 22px;
+  }
 }
