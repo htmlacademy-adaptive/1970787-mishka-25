@@ -1,11 +1,30 @@
 .main-wrapper__title-background {
-  padding: 74px 30px 73px;
   background-color: @lightgrey;
+  border-top: 1px solid fade(@black, 10%);
 
   &--image {
     padding: 73px 30px 120px;
     background-image: url("../img/main-title-mobile.jpg");
     background-position: center -17px;
     background-repeat: no-repeat;
+
+    @media (min-width: @tablet-width) {
+      background-image: url("../img/main-title-tablet.jpg");
+      background-position: center 0;
+    }
+
+    @media (min-width: @desktop-width) {
+      background-image: url("../img/main-title-desktop.jpg");
+    }
+  }
+
+  @media (min-width: @tablet-width) {
+    margin-top: -88px;
+    padding: 155px 50px 372px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-top: -88px;
+    padding: 158px 225px 355px;
   }
 }

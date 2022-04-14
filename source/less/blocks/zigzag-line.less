@@ -1,7 +1,22 @@
 .zigzag-line {
   background-image: url("../img/zigzag-line-mobile.svg");
-  background-repeat: no-repeat;
-  width: 100%;
+  width: 320px;
+  left: -30px;
   height: 6px;
   box-sizing: border-box;
+  position: relative;
+
+  @media (min-width: @tablet-width) {
+    background-image: url("../img/zigzag-line-tablet.svg");
+    height: 17px;
+    width: @tablet-width;
+    left: -50px;
+  }
+
+  @media (min-width: @desktop-width) {
+    background-image: url("../img/zigzag-line-desktop.svg");
+    height: 23px;
+    width: @desktop-width - 100px;
+    left: 0;
+  }
 }

@@ -1,14 +1,63 @@
+.contacts {
+  @media (min-width: @desktop-width) {
+    width: 1050px;
+    margin: 0 auto 105px;
+    display: grid;
+    grid-template-columns: 524px 527px;
+  }
+}
+
 .contacts__title {
   width: 260px;
   margin: 0 auto 28px;
+
+  @media (min-width: @tablet-width) {
+    width: 668px;
+    margin-bottom: 49px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 100%;
+    margin: 79px 0 35px;
+  }
 }
 
 .contacts__address-wrapper {
+  position: relative;
   width: 260px;
   margin: 0 auto 62px;
   display: grid;
   grid-template-columns: 72px 183px;
   gap: 33px 2px;
+
+  @media (min-width: @tablet-width) {
+    width: 668px;
+    grid-template-columns: 78px 256px 78px 256px;
+    gap: 0;
+    margin-bottom: 49px;
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: 47px;
+      height: 81px;
+      top: -121px;
+      right: 0;
+      background-image: url("../img/contacts-flag.svg");
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 260px;
+    grid-template-columns: 72px 183px;
+    gap: 33px 2px;
+    margin: 0;
+
+    &::after {
+      top: -109px;
+      left: -111px;
+    }
+  }
 }
 
 .contacts__text {
@@ -21,17 +70,20 @@
 
   &--email {
     text-decoration: none;
-    border-bottom: 1px solid @mint-decoration;
+  }
+}
 
-    &:hover {
-      color: @mint-hover;
-      border-color: @mint-hover;
-    }
+.contacts__text-border {
+  border-bottom: 1px solid @mint-decoration;
 
-    &:active {
-      color: @mint-hover;
-      border-color: transparent;
-    }
+  &:hover {
+    color: @mint-hover;
+    border-color: @mint-hover;
+  }
+
+  &:active {
+    color: @mint-hover;
+    border-color: transparent;
   }
 }
 
@@ -39,10 +91,30 @@
   width: 100%;
   height: 454px;
   margin-bottom: 42px;
+
+  @media (min-width: @tablet-width) {
+    height: 457px;
+    margin-bottom: 55px;
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-column: 2 / 3;
+    grid-row: 1 /3;
+    margin-bottom: 0;
+  }
 }
 
 .contacts__button {
   width: 260px;
   margin: 0 auto 39px;
   padding-top: 16px;
+
+  @media (min-width: @tablet-width) {
+    width: 230px;
+    margin-bottom: 57px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin: 0;
+  }
 }

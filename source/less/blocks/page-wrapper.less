@@ -2,4 +2,45 @@
   box-sizing: border-box;
   width: 100%;
   padding: 0 30px;
+
+  @media (min-width: @tablet-width) {
+    padding: 0 50px;
+
+    &--footer-wrapper {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 668px;
+      padding: 0;
+      margin: 0 auto;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    &--contacts-wrapper {
+      width: auto;
+      padding: 0;
+      margin-left: 174px;
+    }
+
+    &--contacts-button-wrapper {
+      width: auto;
+      padding: 0;
+      margin-left: 174px;
+      align-self: end;
+    }
+
+    &--footer-wrapper {
+      width: 1050px;
+    }
+  }
+}
+
+.page-wrapper__reviews-desktop-wrapper {
+  @media (min-width: @desktop-width) {
+    box-sizing: border-box;
+    width: 1050px;
+    margin: 0 auto;
+    padding-left: 174px;
+  }
 }
