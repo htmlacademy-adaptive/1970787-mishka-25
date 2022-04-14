@@ -3,6 +3,10 @@
   display: flex;
   justify-content: center;
   align-items: center;
+
+  @media (min-width: @tablet-width) {
+    width: auto;
+  }
 }
 
 .copyright__text {
@@ -11,6 +15,10 @@
   line-height: 18px;
   color: @black;
   margin-right: 27px;
+
+  @media (min-width: @tablet-width) {
+    margin-right: 25px;
+  }
 }
 
 .copyright__link {
