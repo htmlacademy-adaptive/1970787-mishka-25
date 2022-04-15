@@ -1,20 +1,18 @@
 .product-of-the-week {
   width: 260px;
-  margin: 0 auto 31px;
+  margin: 0 auto;
 
   @media (min-width: @tablet-width) {
     width: 668px;
     display: grid;
     grid-template-columns: 292px 179px 113px;
     gap: 33px 42px;
-    margin-bottom: 56px;
   }
 
   @media (min-width: @desktop-width) {
     width: 1050px;
     grid-template-columns: 132px 307px 195px 287px;
     gap: 33px 43px;
-    margin-bottom: 68px;
   }
 }
 
@@ -144,8 +142,14 @@
 }
 
 .product-of-the-week__zigzag-line {
+  margin-bottom: 31px;
+
   @media (min-width: @tablet-width) {
     grid-column: 1 / 4;
-    margin: 0;
+    margin: 0 0 56px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 68px;
   }
 }

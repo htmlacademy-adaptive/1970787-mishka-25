@@ -5,14 +5,12 @@
   font-weight: 700;
   line-height: 24px;
   background-color: @mint;
-  margin-bottom: 31px;
 
   @media (min-width: @tablet-width) {
     font-size: 20px;
     line-height: 30px;
     padding: 0 50px;
     background-color: @lightgrey;
-    margin-bottom: 40px;
 
     &::after {
       content: "";
@@ -26,8 +24,6 @@
   }
 
   @media (min-width: @desktop-width) {
-    margin-bottom: 54px;
-
     &::after {
       content: "";
       width: @desktop-width;
@@ -41,16 +37,19 @@
 }
 
 .page-catalog__list {
+  margin-bottom: 31px;
+
   @media (min-width: @tablet-width) {
     width: 668px;
     display: grid;
     grid-template-columns: repeat(2, 334px);
-    margin: 0 auto;
+    margin: 0 auto 40px;
   }
 
   @media (min-width: @desktop-width) {
     width: 1050px;
     grid-template-columns: repeat(2, 525px);
+    margin-bottom: 54px;
   }
 }
 
