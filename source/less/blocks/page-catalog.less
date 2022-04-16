@@ -10,29 +10,7 @@
     font-size: 20px;
     line-height: 30px;
     padding: 0 50px;
-    background-color: @lightgrey;
-
-    &::after {
-      content: "";
-      width: @tablet-width;
-      height: 24px;
-      position: absolute;
-      bottom: -12px;
-      left: calc((100vw - 768px) / 2);
-      background-image: url("../../img/page-catalog-wave-tablet.svg");
-    }
-  }
-
-  @media (min-width: @desktop-width) {
-    &::after {
-      content: "";
-      width: @desktop-width;
-      height: 34px;
-      position: absolute;
-      bottom: -17px;
-      left: calc((100vw - 1150px) / 2);
-      background-image: url("../../img/page-catalog-wave-desktop.svg");
-    }
+    background-color: @lightgrey-background;
   }
 }
 
