@@ -3,6 +3,20 @@
   margin: 0 auto 58px;
   border: 1px solid @lightgrey-border;
 
+  @media (min-width: @tablet-width) {
+    width: 668px;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 64px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 1050px;
+    display: grid;
+    grid-template-columns: 683px 288px;
+    gap: 0 79px;
+  }
+
   &:hover {
     box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
   }
@@ -15,25 +29,60 @@
 .production-process__title {
   font-size: 17px;
   line-height: 24px;
-  margin: 22px 13px 27px 91px;
+  margin: 22px 0 27px;
+  padding: 0 13px 0 91px;
   position: relative;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    margin: 41px 0 25px;
+    padding: 0 107px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin: 0;
+    padding: 96px 110px 28px 0;
+  }
 
   &::before {
     content: "";
     position: absolute;
     top: 0;
-    left: -47px;
+    left: 34px;
     width: 32px;
     height: 100%;
     background-image: url("../img/video-icon.svg");
     background-repeat: no-repeat;
     background-position: center center;
+
+    @media (min-width: @tablet-width) {
+      left: 42px;
+    }
+
+    @media (min-width: @desktop-width) {
+      top: 47px;
+      left: 0;
+      height: 22px;
+    }
   }
 }
 
 .production-process__video-container {
   position: relative;
   margin-bottom: 35px;
+
+  @media (min-width: @tablet-width) {
+    width: 668px;
+    height: 455px;
+    margin: 0;
+    order: -1;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 683px;
+    height: 455px;
+    grid-row: 1 / 4;
+  }
 
   & img {
     display: block;
@@ -47,6 +96,11 @@
     width: 101px;
     height: 77px;
     background-image: url("../img/play-button.svg");
+
+    @media (min-width: @tablet-width) {
+      top: 189px;
+      left: 283px;
+    }
   }
 
   &:hover {
@@ -66,6 +120,16 @@
   font-size: 13px;
   padding-left: 34px;
   margin-bottom: 41px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 15px;
+    padding: 0 17px 0 40px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 0;
+    margin-bottom: 52px;
+  }
 }
 
 .production-process__button {
@@ -74,4 +138,15 @@
   padding-top: 18px;
   font-size: 17px;
   line-height: 16px;
+
+  @media (min-width: @tablet-width) {
+    width: 582px;
+    margin-bottom: 46px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 230px;
+    margin: 0;
+    margin-bottom: 60px;
+  }
 }
