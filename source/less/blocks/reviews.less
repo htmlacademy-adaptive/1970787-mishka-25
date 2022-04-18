@@ -1,6 +1,6 @@
 .reviews {
   width: 260px;
-  margin: 0 auto 38px;
+  margin: 0 auto;
 
   @media (min-width: @tablet-width) {
     position: relative;
@@ -8,7 +8,6 @@
     display: grid;
     grid-template-columns: 493px 175px;
     gap: 39px 0;
-    margin-bottom: 68px;
 
     &::before {
       content: "";
@@ -25,7 +24,7 @@
   @media (min-width: @desktop-width) {
     width: 876px;
     grid-template-columns: 701px 175px;
-    margin: 0 0 71px;
+    margin: 0;
 
     &::before {
       left: -174px;
@@ -53,14 +52,17 @@
 }
 
 .reviews__text {
+  min-height: 270px;
   margin-bottom: 33px;
   line-height: 30px;
 
   @media (min-width: @tablet-width) {
+    min-height: 120px;
     margin-bottom: 61px;
   }
 
   @media (min-width: @desktop-width) {
+    min-height: 90px;
     margin-bottom: 44px;
   }
 }
@@ -116,12 +118,16 @@
 }
 
 .reviews__zigzag-line {
+  margin-bottom: 38px;
+
   @media (min-width: @tablet-width) {
     margin-top: 66px;
+    margin-bottom: 68px;
   }
 
   @media (min-width: @desktop-width) {
     left: -174px;
     margin-top: 114px;
+    margin-bottom: 71px;
   }
 }

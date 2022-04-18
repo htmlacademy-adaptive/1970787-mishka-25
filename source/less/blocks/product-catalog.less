@@ -1,10 +1,27 @@
 .product-catalog {
   width: 260px;
-  margin: 30px auto;
+  margin: 0 auto;
+  padding: 30px 0;
+
+  @media (min-width: @tablet-width) {
+    width: 668px;
+    padding: 79px 0 53px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 1050px;
+    padding: 128px 0 57px;
+  }
 }
 
 .product-catalog__list {
   margin: 0;
   padding: 0;
   list-style: none;
+
+  @media (min-width: @desktop-width) {
+    display: grid;
+    grid-template-columns: repeat(3, 316px);
+    gap: 51px;
+  }
 }
