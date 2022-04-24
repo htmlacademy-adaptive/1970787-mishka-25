@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Магазин «Мишка»</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="favicon.ico"> <!-- 32×32 -->
+    <link rel="icon" href="img/favicons/32.svg" type="image/svg+xml"> <!--svg-->
+    <link rel="apple-touch-icon" href="img/favicons/apple-touch-icon.png"> <!-- 180×180 -->
+    <link rel="manifest" href="manifest.webmanifest">
   </head>
   <body class="page__body">
     <header class="main-header">
@@ -85,7 +89,13 @@
             <p class="product-of-the-week__properties-text section-text">Высота:</p>
             <p class="product-of-the-week__properties-text section-text">15 см</p>
           </div>
-          <img class="product-of-the-week__image" src="img/product-of-the-week-mobile.jpg" width="260" height="315" alt="Вязаные корзинки.">
+          <div class="product-of-the-week__image-wrapper">
+            <picture>
+              <source media="(min-width: 1150px)" srcset="img/product-of-the-week-desktop.jpg 1x, img/product-of-the-week-desktop@2x.jpg 2x">
+              <source media="(min-width: 768px)" srcset="img/product-of-the-week-tablet.jpg 1x, img/product-of-the-week-tablet@2x.jpg 2x">
+              <img class="product-of-the-week__image" src="img/product-of-the-week-mobile.jpg" srcset="img/product-of-the-week-mobile@2x.jpg 2x" width="260" height="315" alt="Вязаные корзинки.">
+            </picture>
+          </div>
           <b class="product-of-the-week__price">Цена: 990 руб.</b>
           <button class="product-of-the-week__button button">ЗАКАЗАТЬ</button>
           <div class="product-of-the-week__zigzag-line zigzag-line"></div>
