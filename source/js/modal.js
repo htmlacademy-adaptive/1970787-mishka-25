@@ -1,9 +1,11 @@
 let modal = document.querySelector('.modal');
-let button = document.querySelector('.button--modal');
+let buttons = document.querySelectorAll('.button--modal');
 let container = document.querySelector('.modal__container')
 
-button.addEventListener('click', function() {
-  modal.classList.add ('modal--open');
+buttons.forEach(btn => {
+  btn.addEventListener('click', function() {
+    modal.classList.add ('modal--open');
+  });
 });
 
 modal.addEventListener('click', function(stop) {
