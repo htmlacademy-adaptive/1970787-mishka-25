@@ -7,7 +7,7 @@
     width: 668px;
     display: grid;
     grid-template-columns: 493px 175px;
-    gap: 39px 0;
+    gap: 42px 0;
 
     &::before {
       content: "";
@@ -29,9 +29,11 @@
   @media (min-width: @desktop-width) {
     width: 876px;
     grid-template-columns: 701px 175px;
+    gap: 40px 0;
     margin: 0;
 
     &::before {
+      top: -4px;
       left: -174px;
     }
   }
@@ -41,7 +43,7 @@
   margin-bottom: 14px;
 
   @media (min-width: @tablet-width) {
-    margin: 0;
+    margin-bottom: -4px;
     align-self: end;
   }
 }
@@ -63,12 +65,12 @@
 
   @media (min-width: @tablet-width) {
     min-height: 120px;
-    margin-bottom: 61px;
+    margin-bottom: 57px;
   }
 
   @media (min-width: @desktop-width) {
     min-height: 90px;
-    margin-bottom: 44px;
+    margin-bottom: 41px;
   }
 }
 
@@ -81,10 +83,21 @@
 }
 
 .reviews__author-name {
+  display: block;
   font-style: normal;
   font-weight: 700;
   font-size: 17px;
   color: @black;
+  margin-bottom: 3px;
+
+  @media (min-width: @tablet-width) {
+    margin: 0;
+    font-size: 18px;
+  }
+
+  @media (min-width: @desktop-width) {
+    font-size: 17px;
+  }
 }
 
 .reviews__author-nickname {
@@ -104,7 +117,11 @@
   @media (min-width: @tablet-width) {
     grid-column: 2 / 3;
     grid-row: 3 / 4;
-    margin: 0;
+    margin: 142px 0 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-top: 96px;
   }
 }
 
@@ -117,8 +134,12 @@
     width: 100%;
     grid-column: 2 / 3;
     grid-row: 1 / 2;
-    margin: 79px 0 0;
+    margin: 78px 0 0;
     align-self: end;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-top: 76px;
   }
 }
 
@@ -126,13 +147,13 @@
   margin-bottom: 38px;
 
   @media (min-width: @tablet-width) {
-    margin-top: 66px;
+    margin-top: 75px;
     margin-bottom: 68px;
   }
 
   @media (min-width: @desktop-width) {
     left: -174px;
-    margin-top: 114px;
+    margin-top: 125px;
     margin-bottom: 71px;
   }
 }
