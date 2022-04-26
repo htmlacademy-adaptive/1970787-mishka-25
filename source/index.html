@@ -190,7 +190,7 @@
             </picture>
           </div>
           <b class="product-of-the-week__price">Цена: 990 руб.</b>
-          <button class="product-of-the-week__button button">ЗАКАЗАТЬ</button>
+          <button class="product-of-the-week__button button button--modal">ЗАКАЗАТЬ</button>
           <div class="product-of-the-week__zigzag-line zigzag-line"></div>
         </section>
         <section class="about-us">
@@ -329,6 +329,42 @@
         </div>
       </div>
     </footer>
+
+    <div class="modal"> <!--Для открытия используем модификатор modal--open -->
+      <div class="modal__container modal-cart">
+        <section class="modal-cart__content">
+          <h2 class="modal-cart__title section-title">Добавить в&nbspкорзину</h2>
+          <p class="modal-cart__text section-text">Выберите размер:</p>
+          <form class="modal-form" action="https://echo.htmlacademy.ru" method="post">
+            <fieldset class="modal-cart__fieldset">
+              <legend class="visually-hidden">Размеры</legend>
+              <ul class="modal-cart__list">
+                <li class="modal-cart__item">
+                  <label class="modal-cart__control">
+                    <input class="visually-hidden" type="radio" name="size" value="S" checked>
+                    <span class="modal-cart__control-mark">S</span>
+                  </label>
+                </li>
+                <li class="modal-cart__item">
+                  <label class="modal-cart__control">
+                    <input class="visually-hidden" type="radio" name="size" value="M" checked>
+                    <span class="modal-cart__control-mark">M</span>
+                  </label>
+                </li>
+                <li class="modal-cart__item">
+                  <label class="modal-cart__control">
+                    <input class="visually-hidden" type="radio" name="size" value="L" checked>
+                    <span class="modal-cart__control-mark">L</span>
+                  </label>
+                </li>
+              </ul>
+            </fieldset>
+            <button class="modal-cart__button button" type="submit">Добавить</button>
+          </form>
+        </section>
+      </div>
+    </div>
+    <script src="js/modal.js"></script>
 
   </body>
 </html>
