@@ -5,7 +5,7 @@
   border: none;
 
   &:not(:last-of-type) {
-    margin: 0 0 31px;
+    margin: 0 0 33px;
 
     @media (min-width: @tablet-width) {
       margin: 0;
@@ -36,7 +36,7 @@
 
   @media (min-width: @desktop-width) {
     display: grid;
-    grid-template-columns: 176px 700px;
+    grid-template-columns: 173px 703px;
   }
 
   &--button {
@@ -45,6 +45,7 @@
       flex-direction: row-reverse;
       justify-content: space-between;
       align-items: center;
+      margin-top: 3px;
       padding-bottom: 50px;
     }
 
@@ -81,7 +82,12 @@
   }
 
   @media (min-width: @desktop-width) {
-    padding-left: 58px;
+    padding-top: 70px;
+    padding-left: 61px;
+
+    &--email {
+      padding-top: 17px;
+    }
   }
 
   &::before {
@@ -224,6 +230,16 @@
       position: absolute;
       right: 3px;
       opacity: 0.3;
+
+      @media (min-width: @tablet-width) {
+        right: 21px;
+        top: 15px;
+      }
+
+      @media (min-width: @desktop-width) {
+        right: 6px;
+        top: 18px;
+      }
     }
   }
 
@@ -232,6 +248,16 @@
       position: absolute;
       right: 7px;
       opacity: 0.3;
+
+      @media (min-width: @tablet-width) {
+        right: 25px;
+        top: 10px;
+      }
+
+      @media (min-width: @desktop-width) {
+        right: 11px;
+        top: 12px;
+      }
     }
   }
 }
@@ -252,6 +278,7 @@
 
   &--radio {
     border-radius: 50%;
+    margin-left: 1px;
   }
 }
 
@@ -265,6 +292,7 @@
 
   @media (min-width: @tablet-width) {
     font-size: 19px;
+    padding-left: 81px;
   }
 
   &--field {
@@ -282,7 +310,7 @@
   font-size: 17px;
   line-height: 18px;
   color: @black;
-  height: 52px;
+  height: 51px;
   box-sizing: border-box;
   background-color: transparent;
   border: none;
@@ -292,6 +320,8 @@
 
   @media (min-width: @tablet-width) {
     font-size: 19px;
+    padding-left: 18px;
+    padding-bottom: 3px;
   }
 
   &::placeholder {
@@ -337,10 +367,14 @@
 .primary-form__text {
   margin: 0 0 30px;
   padding-top: 17px;
+  font-size: 14px;
+  line-height: 16px;
 
   @media (min-width: @tablet-width) {
     margin: 0;
     padding: 0;
+    font-size: 17px;
+    line-height: 30px;
   }
 }
 

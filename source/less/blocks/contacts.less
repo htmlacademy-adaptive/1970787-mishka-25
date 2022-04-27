@@ -24,11 +24,11 @@
 
 .contacts__address-wrapper {
   position: relative;
-  width: 260px;
+  width: 261px;
   margin: 0 auto 62px;
   display: grid;
   grid-template-columns: 72px 183px;
-  gap: 33px 2px;
+  gap: 30px 6px;
 
   @media (min-width: @tablet-width) {
     width: 668px;
@@ -42,15 +42,15 @@
       width: 47px;
       height: 81px;
       top: -121px;
-      right: 0;
+      right: 3px;
       background-image: url("../img/contacts-flag.svg");
     }
   }
 
   @media (min-width: @desktop-width) {
     width: 260px;
-    grid-template-columns: 72px 183px;
-    gap: 33px 2px;
+    grid-template-columns: 72px 235px;
+    gap: 30px 6px;
     margin: 0;
 
     &::after {
@@ -68,6 +68,10 @@
   line-height: 30px;
   color: @darkgrey;
 
+  @media (min-width: @tablet-width) {
+    font-size: 17px;
+  }
+
   &--email {
     text-decoration: none;
   }
@@ -75,6 +79,15 @@
 
 .contacts__text-border {
   border-bottom: 1px solid @mint-decoration;
+  padding-bottom: 2px;
+
+  @media (min-width: @tablet-width) {
+    padding-bottom: 4px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-bottom: 8px;
+  }
 
   &:hover {
     color: @mint-hover;
