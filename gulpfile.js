@@ -6,6 +6,9 @@ import autoprefixer from 'autoprefixer';
 import csso from 'postcss-csso';
 import browser from 'browser-sync';
 import rename from 'gulp-rename';
+import htmlmin from 'gulp-htmlmin';
+import terser from 'gulp-terser';
+import squoosh from 'gulp-libsquoosh';
 
 // Styles
 
@@ -22,6 +25,21 @@ export const styles = () => {
     .pipe(browser.stream());
 }
 
+//HTML
+
+const html = () => {
+  return gulp.src('source/*.html')
+    .pipe(htmlmin({collapseWhitespace: true}))
+    .pipe(gulp.dest('build'))
+}
+
+//Scripts
+
+const scripts = () => {
+  return gulp.src('source/js/**/*.js')
+    .pipe(terser())
+    .pipe(gulp.dest('build/js'))
+}
 
 
 // Server
