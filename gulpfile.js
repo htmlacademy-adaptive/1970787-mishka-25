@@ -9,6 +9,7 @@ import rename from 'gulp-rename';
 import htmlmin from 'gulp-htmlmin';
 import terser from 'gulp-terser';
 import squoosh from 'gulp-libsquoosh';
+import svgo from 'gulp-svgmin';
 
 // Styles
 
@@ -56,11 +57,19 @@ const copyImages = () => {
 
 // WebP
 
-export const webpConvert = () => {
+const webpConvert = () => {
   return gulp.src('source/img/**/*.{jpg,png}')
     .pipe(squoosh({
       webp:{}
     }))
+    .pipe(gulp.dest('build/img'))
+}
+
+// SVG
+
+const optimizeSvg = () => {
+  return gulp.src('source/img/**/*.svg')
+    .pipe(svgo())
     .pipe(gulp.dest('build/img'))
 }
 
@@ -95,5 +104,5 @@ const watcher = () => {
 
 
 export default gulp.series(
-  html, styles, scripts, copyImages, server, watcher
+  html, styles, scripts, copyImages, optimizeSvg, server, watcher
 );
