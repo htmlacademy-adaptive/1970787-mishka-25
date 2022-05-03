@@ -41,6 +41,7 @@ const scripts = () => {
   return gulp.src('source/js/**/*.js')
     .pipe(terser())
     .pipe(gulp.dest('build/js'))
+    .pipe(browser.stream())
 }
 
 //Images
@@ -134,11 +135,25 @@ export const build = gulp.series(
     html,
     scripts,
     webpConvert,
-    optimizeSvg,
+    optimizeSvg
   )
 )
 
+//Default
 
 export default gulp.series(
-  html, styles, scripts, copyImages, optimizeSvg, copy, server, watcher
-);
+  clean,
+  copy,
+  copyImages,
+  gulp.parallel (
+    styles,
+    html,
+    scripts,
+    webpConvert,
+    optimizeSvg
+  ),
+  gulp.series(
+    server,
+    watcher
+  )
+)
