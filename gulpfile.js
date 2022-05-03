@@ -41,6 +41,28 @@ const scripts = () => {
     .pipe(gulp.dest('build/js'))
 }
 
+//Images
+
+const optimizeImages = () => {
+  return gulp.src('source/img/**/*.{jpg,png}')
+    .pipe(squoosh())
+    .pipe(gulp.dest('build/img'))
+}
+
+const copyImages = () => {
+  return gulp.src('source/img/**/*.{jpg,png}')
+    .pipe(gulp.dest('build/img'))
+}
+
+// WebP
+
+export const webpConvert = () => {
+  return gulp.src('source/img/**/*.{jpg,png}')
+    .pipe(squoosh({
+      webp:{}
+    }))
+    .pipe(gulp.dest('build/img'))
+}
 
 // Server
 
@@ -56,14 +78,22 @@ const server = (done) => {
   done();
 }
 
+//Reload
+
+const reload = (done) => {
+  browser.reload();
+  done();
+}
+
 // Watcher
 
 const watcher = () => {
   gulp.watch('source/less/**/*.less', gulp.series(styles));
-  gulp.watch('source/*.html').on('change', browser.reload);
+  gulp.watch('source/js/**/*.js', gulp.series(scripts));
+  gulp.watch('source/*.html', gulp.series(html, reload));
 }
 
 
 export default gulp.series(
-  styles, server, watcher
+  html, styles, scripts, copyImages, server, watcher
 );

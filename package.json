@@ -24,7 +24,7 @@
     "stylelint": "stylelint \"source/less/**/*.less\" --syntax less",
     "lint": "npm run editorconfig && npm run stylelint",
     "build": "gulp styles",
-    "html": "gulp copyImages",
+    "html": "gulp webpConvert",
     "start": "gulp"
   },
   "browserslist": [
