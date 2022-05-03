@@ -10,6 +10,7 @@ import htmlmin from 'gulp-htmlmin';
 import terser from 'gulp-terser';
 import squoosh from 'gulp-libsquoosh';
 import svgo from 'gulp-svgmin';
+import del from 'del';
 
 // Styles
 
@@ -73,6 +74,26 @@ const optimizeSvg = () => {
     .pipe(gulp.dest('build/img'))
 }
 
+// Copy
+
+const copy = (done) => {
+  gulp.src([
+    'source/fonts/*.{woff2,woff}',
+    'source/*.ico',
+    'source/*.webmanifest',
+  ], {
+    base: 'source'
+  })
+    .pipe(gulp.dest('build'))
+  done();
+}
+
+//Clean
+
+const clear = () => {
+  return del('build');
+}
+
 // Server
 
 const server = (done) => {
@@ -104,5 +125,5 @@ const watcher = () => {
 
 
 export default gulp.series(
-  html, styles, scripts, copyImages, optimizeSvg, server, watcher
+  html, styles, scripts, copyImages, optimizeSvg, copy, server, watcher
 );
