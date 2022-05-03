@@ -59,7 +59,7 @@ const copyImages = () => {
 // WebP
 
 const webpConvert = () => {
-  return gulp.src('source/img/**/*.{jpg,png}')
+  return gulp.src(['source/img/**/*.{jpg,png}', '!source/img/favicons/*.*'])
     .pipe(squoosh({
       webp:{}
     }))
@@ -90,7 +90,7 @@ const copy = (done) => {
 
 //Clean
 
-const clear = () => {
+const clean = () => {
   return del('build');
 }
 
@@ -122,6 +122,21 @@ const watcher = () => {
   gulp.watch('source/js/**/*.js', gulp.series(scripts));
   gulp.watch('source/*.html', gulp.series(html, reload));
 }
+
+//Build
+
+export const build = gulp.series(
+  clean,
+  copy,
+  optimizeImages,
+  gulp.parallel (
+    styles,
+    html,
+    scripts,
+    webpConvert,
+    optimizeSvg,
+  )
+)
 
 
 export default gulp.series(
