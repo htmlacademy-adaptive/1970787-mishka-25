@@ -4,6 +4,10 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Вязание на заказ</title>
+    <link rel="preload" href="css/style.min.css" type="style" crossorigin="anonymous">
+    <link rel="preload" href="js/mobile-menu.js" type="script" crossorigin="anonymous">
+    <link rel="preload" href="fonts/opensans.woff2" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="fonts/opensansbold.woff2" type="font/woff2" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.min.css">
     <link rel="icon" href="favicon.ico"> <!-- 32×32 -->
     <link rel="icon" href="img/favicons/32.svg" type="image/svg+xml"> <!--svg-->
@@ -165,7 +169,7 @@
                   <source type="image/webp" srcset="img/catalog/product1-mobile.webp 1x, img/catalog/product1-mobile@2x.webp 2x">
                   <source media="(min-width: 1150px)" srcset="img/catalog/product1-desktop.jpg 1x, img/catalog/product1-desktop@2x.jpg 2x">
                   <source media="(min-width: 768px)" srcset="img/catalog/product1-tablet.jpg 1x, img/catalog/product1-tablet@2x.jpg 2x">
-                  <img class="product-card__image" src="img/catalog/product1-mobile.jpg" srcset="img/catalog/product1-mobile@2x.jpg 2x" width="260" height="195" alt="Зайчик-попрыгайчик">
+                  <img class="product-card__image" src="img/catalog/product1-mobile.jpg" srcset="img/catalog/product1-mobile@2x.jpg 2x" width="260" height="195" loading="lazy" alt="Зайчик-попрыгайчик">
                 </picture>
               </a>
               <div class="product-card__wrapper product-card__wrapper--title">
@@ -189,7 +193,7 @@
                   <source type="image/webp" srcset="img/catalog/product2-mobile.webp 1x, img/catalog/product2-mobile@2x.webp 2x">
                   <source media="(min-width: 1150px)" srcset="img/catalog/product2-desktop.jpg 1x, img/catalog/product2-desktop@2x.jpg 2x">
                   <source media="(min-width: 768px)" srcset="img/catalog/product2-tablet.jpg 1x, img/catalog/product2-tablet@2x.jpg 2x">
-                  <img class="product-card__image" src="img/catalog/product2-mobile.jpg" srcset="img/catalog/product2-mobile@2x.jpg 2x" width="260" height="195" alt="Корзинка для белья">
+                  <img class="product-card__image" src="img/catalog/product2-mobile.jpg" srcset="img/catalog/product2-mobile@2x.jpg 2x" width="260" height="195" loading="lazy" alt="Корзинка для белья">
                 </picture>
               </a>
               <div class="product-card__wrapper product-card__wrapper--title">
@@ -213,7 +217,7 @@
                   <source type="image/webp" srcset="img/catalog/product3-mobile.webp 1x, img/catalog/product3-mobile@2x.webp 2x">
                   <source media="(min-width: 1150px)" srcset="img/catalog/product3-desktop.jpg 1x, img/catalog/product3-desktop@2x.jpg 2x">
                   <source media="(min-width: 768px)" srcset="img/catalog/product3-tablet.jpg 1x, img/catalog/product3-tablet@2x.jpg 2x">
-                  <img class="product-card__image" src="img/catalog/product3-mobile.jpg" srcset="img/catalog/product3-mobile@2x.jpg 2x" width="260" height="195" alt="Большая корзинка для игрушек">
+                  <img class="product-card__image" src="img/catalog/product3-mobile.jpg" srcset="img/catalog/product3-mobile@2x.jpg 2x" width="260" height="195" loading="lazy" alt="Большая корзинка для игрушек">
                 </picture>
               </a>
               <div class="product-card__wrapper product-card__wrapper--title">
@@ -241,7 +245,7 @@
               <source type="image/webp" srcset="img/video-mobile.webp 1x, img/video-mobile@2x.webp 2x">
               <source media="(min-width: 1150px)" srcset="img/video-desktop.jpg 1x, img/video-desktop@2x.jpg 2x">
               <source media="(min-width: 768px)" srcset="img/video-tablet.jpg 1x, img/video-tablet@2x.jpg 2x">
-              <img class="production-process__video" src="img/video-mobile.jpg" srcset="img/video-mobile@2x.jpg 2x" width="260" height="150" alt="Изображение вместо видео"> <!-- Убрать после добавления видео -->
+              <img class="production-process__video" src="img/video-mobile.jpg" srcset="img/video-mobile@2x.jpg 2x" width="260" height="150" loading="lazy" alt="Изображение вместо видео"> <!-- Убрать после добавления видео -->
             </picture>
           </div>
           <p class="production-process__text section-text"><span>По просьбам наших любимых фолловеров мы сняли для вас подробное видео о&nbspтом, как появляются наши товары.</span></p>
